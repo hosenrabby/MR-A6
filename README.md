@@ -52,11 +52,3 @@ Scope determines where variables are accessible within your code:
 * **Block Scope**: Variables declared with `let` or `const` inside a block `{ }` (like `if` or `for`) are restricted to that specific block.
 
 ---
-
-## 🚀 How to Use
-This repository is for educational purposes. You can:
-1. Clone the repo: `git clone https://github.com/your-username/your-repo-name.git`
-2. Use these snippets as a reference for your own projects or interview prep.
-
-## 📝 License
-This project is open-source and available under the MIT License.
