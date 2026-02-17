@@ -118,8 +118,8 @@
             <div class="w-10/12 m-auto text-center">
                 <h2 class="text-3xl font-bold mb-6">Our Products</h2>
 
-                <div class="flex flex-wrap justify-center gap-3 mb-12" id="category-filters">
-                    <button class="btn btn-sm rounded-full px-6 bg-blue-600 text-white border-none">All</button>
+                <div class="flex flex-wrap justify-center gap-3 mb-12" id="categorys">
+                    <button class="catBtn btn btn-sm rounded-full px-6 bg-blue-600 text-white border-none">All</button>
                     <!-- <button class="btn btn-sm rounded-full px-6 btn-outline border-gray-300 text-gray-600">Electronics</button> -->
                 </div>
 
@@ -170,6 +170,22 @@
                 </fieldset>
             </form>
         </div>
+
+        <!-- Open the modal using ID.showModal() method -->
+        <!-- <button class="btn" onclick="prod_modal.showModal()">open modal</button> -->
+        <dialog id="prod_modal" class="modal">
+            <div class="modal-box">
+                <div id="details-container"></div>
+                <!-- <h3 class="text-lg font-bold">Hello!</h3>
+                <p class="py-4">Press ESC key or click the button below to close</p> -->
+                <div class="modal-action">
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn">Close</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
 
         <div class="w-9/12 m-auto py-8 flex justify-between items-center text-slate-400 text-sm">
             <p>© 2025 SwiftCart, Inc. All rights reserved.</p>
