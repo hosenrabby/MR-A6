@@ -1,143 +1,62 @@
-## WELCOME TO ( সহজ সরল সিম্পল ) ASSIGNMENT (SwiftCart E-Commerce)
-
-
-## Repository: Create your own public repository and submit the link.
-
----
-## 🛍️ API Endpoints
----
-1. Get 🛍️ All Products
-```bash
-https://fakestoreapi.com/products
-```
-
-2. Get 🛍️ All Categories
-```bash
-https://fakestoreapi.com/products/categories
-```
-
-3. Get 🛍️ Products by Category
-```bash
-https://fakestoreapi.com/products/category/${category}
-```
-
-Example:
-```bash
-https://fakestoreapi.com/products/category/jewelery
-```
-
-4. Get 🛍️ Single Product Detail
-```bash
-https://fakestoreapi.com/products/${id}
-```
-
-Example:
-```bash
-https://fakestoreapi.com/products/1
-```
+# JavaScript Fundamentals Q&A
 
 ---
 
-## 🎯 Project Specifications (UI/UX)
+## 🏗️ Core Concepts
 
-#### 1) Navbar
-- Website **logo/name** ("SwiftCart") on the **left**
-- **Menu items** (Home, Products, About, Contact) in the **center**
-- **Cart Icon/Button** on the **right** (showing item count is a bonus)
+### 1. What is the difference between `null` and `undefined`?
+While both represent the absence of a value, they are used differently:
 
-#### 2) Banner / Hero Section
-- A **background image** (related to shopping/fashion/electronics)
-- A **title** (e.g., "Best Collection For You") and **subtitle**
-- A **centered button** (e.g., "Shop Now")
+* **`undefined`**: The default value of a variable that has been declared but not yet assigned a value. It essentially means "value not found."
+* **`null`**: An assignment value that represents the **intentional** absence of any object value. It must be explicitly assigned.
 
-#### 3) Features / Why Choose Us
-- **Section heading**
-- **3-4 items** highlighting features like "Fast Delivery", "24/7 Support", "Secure Payment", etc. (Icon + Title + Short Text)
-
-#### 4) Trending / Top Rated Section
-- Show **3 top-rated products** (you can filter by rating or just pick the first 3) based on API data or hardcoded for layout practice.
-
-#### 5) Newsletter & Footer
-- **Newsletter Subscription Form**: Email input + Subscribe button.
-- **Footer** with copyright info, social links, and quick links.
-
-#### 6) Responsiveness
-- Website must be **mobile responsive** 
+| Feature | `undefined` | `null` |
+| :--- | :--- | :--- |
+| **Type** | `undefined` | `object` |
+| **Origin** | System-defined | Programmer-defined |
 
 ---
-#### 7) Create a README file to answer the following questions-
 
-> **⚠️ Warning:** Do not use any AI tools to answer these questions. You must write the answers in **Bangla**.
+### 2. `map()` vs. `forEach()`
+Both are used to iterate over arrays, but they serve different purposes:
 
-#### 1) What is the difference between `null` and `undefined`?
+* **`map()`**: Transforms an array by applying a function to each element and **returns a new array**. It is non-mutating.
+* **`forEach()`**: Executes a provided function once for each array element. It **returns `undefined`** and is used for side effects (e.g., logging or updating a database).
 
-#### 2) What is the use of the `map()` function in JavaScript? How is it different from `forEach()`?
+---
 
-#### 3) What is the difference between `==` and `===`?
+### 3. Loose Equality (`==`) vs. Strict Equality (`===`)
+The difference lies in how types are handled:
 
-#### 4) What is the significance of `async`/`await` in fetching API data?
+* **`==` (Loose)**: Performs **Type Coercion**, meaning it tries to convert the values to a common type before comparing. 
+    * `5 == "5"` results in `true`.
+* **`===` (Strict)**: Compares both **value and type**. No conversion happens.
+    * `5 === "5"` results in `false`.
 
-#### 5) Explain the concept of Scope in JavaScript (Global, Function, Block).
+---
 
-## ⚡ Dynamic Features & Functionalities
+### 4. Significance of `async/await` in API Fetching
+`async/await` is a modern way to handle asynchronous operations, making them look and behave like synchronous code.
 
-1) Category Loading
-Load Product Categories dynamically on the UI (e.g., as filter buttons or a dropdown).
+* **Readability**: Eliminates "Promise Chaining" (`.then()`) and "Callback Hell."
+* **Error Handling**: Allows you to use standard `try/catch` blocks for cleaner debugging.
+* **Efficiency**: The `await` keyword pauses function execution until the data is fetched, ensuring variables are populated before they are used.
 
-2) Category Click → Product Data
-On clicking a category: load products of that specific category.
-Display in a grid layout (e.g., 3 or 4 columns).
+---
 
-3) Card Contents
-Each product card must include:
-- **Image** (from API)
-- **Title** (truncated if too long)
-- **Price** ($ value)
-- **Category** (badge or text)
-- **Rating** (Visualize stars or just show the number)
-- **Details Button**
-- **Add to Cart button**
+### 5. JavaScript Scope
+Scope determines where variables are accessible within your code:
 
-4) Modal on "Details" Click
-Clicking the "Details" button on a card opens a modal with full product details:
-- Full Title
-- Full Description
-- Price & Rating
-- "Buy Now" or "Add to Cart" button in modal.
+* **Global Scope**: Variables declared outside any function. Accessible from anywhere in the script.
+* **Function Scope**: Variables declared inside a function (using `var`, `let`, or `const`) are only accessible within that function.
+* **Block Scope**: Variables declared with `let` or `const` inside a block `{ }` (like `if` or `for`) are restricted to that specific block.
 
-## 🧪 Challenges (Optional)
+---
 
-    1) Add to Cart Interaction
-    Clicking "Add to Cart":
-    - Adds the product to a Cart list/array.
-    - Updates a Cart Count in the Navbar.
-    - (Optional) Persist in LocalStorage.
+## 🚀 How to Use
+This repository is for educational purposes. You can:
+1. Clone the repo: `git clone https://github.com/your-username/your-repo-name.git`
+2. Use these snippets as a reference for your own projects or interview prep.
 
-    2) Cart Calculation
-    Show a summary (maybe in a sidebar or a separate section/modal) that lists added items and calculates the **Total Price**.
-
-    3) Remove from Cart
-    Ability to remove an item from the cart and update the Total Price instantly.
-
-    4) Loading Spinner
-    Show a loading spinner or skeleton loader while fetching data from the API.
-
-    5) Active State
-    Highlight the currently selected category button.
-
-🧰 Technology Stack:
-    HTML
-    CSS (Vanilla / Tailwind / DaisyUI)
-    JavaScript (Vanilla only, no frameworks like React/Vue for this assignment)
-
-📌 Rules
-✅ At least 5 meaningful commits
-❌ No dummy text where real data can be shown.
-
-## 🔗 Submission
-- **Live Link :** YOUR_DEPLOYED_URL_HERE
-- **GitHub Repository:** YOUR_REPO_URL_HERE
-
-
-### 📅 Deadline For 60 marks: 17th February, 2026 (11:59 pm ⏱️)
-- Note: There won't be any 50 or 30 marks submission deadline. Only 60 marks submission deadline. After 17th February, 2026 (11:59 pm ⏱️) no submission will be accepted.
+## 📝 License
+This project is open-source and available under the MIT License.
